@@ -167,3 +167,137 @@ header {
 }
 
 
+/* styles Slider */
+
+
+.slider {
+    background-color:  #f06c64;
+    overflow: hidden;
+    height: 600px;
+   
+    border-bottom: solid 6px #ea676b;
+}
+
+.slider__wrapper {
+position: relative;
+}
+
+.slider__item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+}
+
+.vertical__phone{
+    padding: 54px 0px 0 35px;
+}
+
+.horizontal__phone{
+   padding:  50px 32px 0 0px;
+}
+
+.arrow__left {
+    position: absolute;
+    top: 37.8%;
+    left:25.5%;
+}
+
+.prev {
+    cursor: pointer;
+}
+
+.arrow__right {
+    position: absolute;
+    top: 37.8%;
+    right: 25.3%;
+}
+.next {
+   cursor: pointer;
+}
+
+
+/* END styles Slider */
+
+
+/*  styles Services */
+
+.services {
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+
+.title__services {   
+    margin-top: 61px;
+     font-family: 'Lato Black', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #666d89;
+    word-spacing: -.1px;
+    }
+
+    .text__services {
+        margin-top: 19px;
+        margin-bottom: 43px;
+
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #767e9e;
+    line-height: 30px;
+    text-align: justify;
+    letter-spacing: -.349px;
+    }
+
+
+.services__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.services__inner  {
+    margin-bottom: 30px;
+    width: 33%;
+    max-width: 299px;
+    max-height: 93px;
+    padding-left: 79px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+.services__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 59px;
+    height: 59px;
+    padding: 15px;
+    border: 2px solid #666d89;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.6px;
+    left: 0.8px;
+}
+
+
+.services__title {
+    margin-bottom: 7px;
+    color: #666d89;
+    font-family: "Lato Black", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+
+.services__text {
+    color: #767e9e;
+    word-spacing: -.1px;
+    font-size: 1.2rem;
+    line-height: 21px;
+    text-align: justify;
+    font-weight: 100;
+}
+

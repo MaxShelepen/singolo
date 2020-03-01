@@ -181,6 +181,7 @@ margin-bottom: 15px;
 
 .about__content {
     flex-basis: 15%;
+  
 }
 .about__titleName {
     color: #666d89;
@@ -213,17 +214,17 @@ margin-bottom: 15px;
     height: 32px;
     margin-right: 8px;
    display: flex;
-  
+   transition: border-color .2s linear, color .2s linear;
     align-items: center;
     justify-content: center;
-    
+    cursor: pointer;
   
 }
 
-.social__item :hover {
-    color: rgb(204, 31, 54);
-   
-    
+.social__item:hover {
+    color: #ffffff;
+    border-color: rgb(204, 31, 54);
+    background-color: rgb(204, 31, 54);
 }
 
 

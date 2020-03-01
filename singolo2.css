@@ -148,6 +148,12 @@ margin-bottom: 15px;
 
 
 /* styles About Us */
+
+.about {
+    padding: 0px 0 68px;
+
+}
+
 .about__title {
     font-family: "Lato Black", sans-serif;
     color: #666d89;

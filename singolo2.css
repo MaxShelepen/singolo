@@ -1,0 +1,157 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato Regular', sans-serif;
+    font-size: 1.6rem;
+    background-color: #fefefe;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family: 'fontello';
+    src: url('fonts/fontello/fontello.eot?11696308');
+    src: url('fonts/fontello/fontello.eot?11696308#iefix') format('embedded-opentype'),
+        url('fonts/fontello/fontello.woff?11696308') format('woff'),
+        url('fonts/fontello/fontello.ttf?11696308') format('truetype'),
+        url('fonts/fontello/fontello.svg?11696308#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    speak: none;
+}
+
+
+@font-face {
+    font-family: 'linecons';
+    src: url('fonts/linecons/linecons.eot');
+    src: url('fonts/linecons/linecons.eot?#iefix') format('embedded-opentype'),
+        url('fonts/linecons/linecons.ttf') format('truetype'),
+        url('fonts/linecons/linecons.woff') format('woff'),
+        url('fonts/linecons/linecons.svg#linecons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    speak: none;
+}
+
+
+
+
+.container {
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+
+.portfolio {
+
+    padding: 62px 0 46px;
+    background-color: #2d303a;
+    border-bottom: solid 6px #323746;
+}
+
+.portfolio__title {
+    font-family: "Lato Black", sans-serif;
+    color: #666d89;
+    font-size: 3rem;
+    margin-bottom: 20.7px;
+}
+
+
+.portfolio__subtitle {
+    font-family: 'Lato Regular', sans-serif;
+    color: #666d89;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: -.34px;
+    text-align: justify;
+}
+
+
+.portfolio__tags {
+    margin: 15px 0px 19px;
+}
+
+
+.portfolio__tag {
+    font-family: 'Lato Regular', sans-serif;
+    font-size: 12px;
+    color: #666d89;
+    font-weight: 400;
+    line-height: 21.56px;
+    border: 1px #666d89 solid;
+    border-radius: 5px;
+    color: #767e9e;
+    cursor: pointer;
+    transition: border-color .2s linear, color .2s linear;
+    margin-right: 5px;
+    padding: 4px 7px;
+}
+
+.active__tag {
+    color: #ffffff;
+    border: 1px #ffffff solid;
+    border-radius: 5px;
+}
+
+.portfolio__tag:hover {
+    border-color: #c5c5c5;
+    color: #c5c5c5;
+}
+
+
+.portfolio__3column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.portfolio__item {
+    flex-basis: 23%;
+margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.portfolio__3column {
+    display: flex;
+    flex-wrap: wrap;
+}

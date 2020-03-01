@@ -64,6 +64,8 @@ ul {
 
 
 
+
+
 .container {
     width: 100%;
     max-width: 1020px;
@@ -71,10 +73,10 @@ ul {
     padding: 0 40px;
 }
 
-
+/* styles Portfolio */
 .portfolio {
 
-    padding: 62px 0 46px;
+    padding: 62px 0 47px;
     background-color: #2d303a;
     border-bottom: solid 6px #323746;
 }
@@ -140,18 +142,91 @@ ul {
 margin-bottom: 15px;
 }
 
+/* End styles Portfolio */
 
 
 
 
+/* styles About Us */
+.about__title {
+    font-family: "Lato Black", sans-serif;
+    color: #666d89;
+    font-size: 3rem;
+    margin: 62px 0px 18px 0px;
+}
+
+.about__subtitle {
+    font-family: 'Lato Regular', sans-serif;
+    font-size: 17px;
+    color: #666d89;
+    font-weight: 400;
+    margin-bottom: 44px;
+    letter-spacing: 0.07px;
+    line-height: 29.56px;
+}
 
 
-
-
-
-
-
-.portfolio__3column {
+.about__3column {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
+
+
+.about__content {
+    flex-basis: 15%;
+}
+.about__titleName {
+    color: #666d89;
+    font-family: "Lato Black", sans-serif;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    letter-spacing: -.4px;
+}
+
+.about__subtitleName {
+    font-family: 'Lato Regular', sans-serif;
+    color: #666d89;
+    font-size: 12px;
+    letter-spacing: 0.07px;
+    
+    margin-bottom: 25px;
+    line-height: 19.56px;
+}
+
+.social {
+    display: flex;
+}
+
+.social__item {
+    text-decoration: none;
+    border: 1px #666d89 solid;
+    border-radius: 50px;
+    color: #666d89;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+   display: flex;
+  
+    align-items: center;
+    justify-content: center;
+    
+  
+}
+
+.social__item :hover {
+    color: rgb(204, 31, 54);
+   
+    
+}
+
+
+
+
+
+
+
+
+
+
+

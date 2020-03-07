@@ -89,3 +89,29 @@
     content: "\eaca";
   }
   
+  @font-face {
+    font-family: 'fontello';
+    src: url('fonts/fontello/fontello.eot?11696308');
+    src: url('fonts/fontello/fontello.eot?11696308#iefix') format('embedded-opentype'),
+        url('fonts/fontello/fontello.woff?11696308') format('woff'),
+        url('fonts/fontello/fontello.ttf?11696308') format('truetype'),
+        url('fonts/fontello/fontello.svg?11696308#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    speak: none;
+}
+
+
+@font-face {
+    font-family: 'linecons';
+    src: url('fonts/linecons/linecons.eot');
+    src: url('fonts/linecons/linecons.eot?#iefix') format('embedded-opentype'),
+        url('fonts/linecons/linecons.ttf') format('truetype'),
+        url('fonts/linecons/linecons.woff') format('woff'),
+        url('fonts/linecons/linecons.svg#linecons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    speak: none;
+}

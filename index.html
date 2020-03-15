@@ -16,18 +16,17 @@
 <body>
     <!-- Header
 		============================= -->
-    <header class="header">
+    <header id ='home' class="header">
         <div class="container">
             <div class="header__wrapper">
                 <h1 class="logo__header">SINGOLO <span class="el-logo__header">*</span></h1>
 
                 <nav class="navbar">
-                    <ul class="navbar__list">
-                        <li class="navbar__list-item active">home</li>
-                        <li class="navbar__list-item">services</li>
-                        <li class="navbar__list-item">portfolio</li>
-                        <li class="navbar__list-item">about</li>
-                        <li class="navbar__list-item">contact</li>
+                    <ul id ='menu' class="navbar__list">
+                        <li class="navbar__list-item active"><a  href="#home">home</a></li>
+                        <li class="navbar__list-item"><a   href="#portfolio">portfolio</a></li>
+                        <li  class="navbar__list-item"><a  href="#about">about</a></li>
+                        <li class="navbar__list-item"><a class="link"  href="#contact">contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -43,16 +42,29 @@
             <div class="slider__wrapper">
                 <div class="slider__item">
                     <div class="arrow__left">
-                        <div class="prev"><img src="assets/images/prev.png" alt="arrow__l"></div>
+                        <div class="arrow__prev"><img class = "arrow" src="assets/images/prev.png" alt="arrow__l"></div>
                     </div>
-                    <div class="vertical__phone">
-                        <img src="assets/images/phone_vertical.png" alt="phone_vertical">
+                    <div class="slider__slide-1 active">
+                        <img src="assets/images/Slide-1.png" alt="slider__slide-1">
+                       
+                        <div class="phone1__screen-Slide1">
+                            <img class ="screen"  src="assets/images/screen__phone1-Slide1.png">
+                        </div>
+
+                        <div class="phone2__screen-Slide1">
+                            <img class ="screen horizontal__phone"  src="assets/images/screen__phone2-Slide1.png">
+                        </div>
+
                     </div>
-                    <div class="horizontal__phone">
-                        <img src="assets/images/phone_horizontal.png" alt="phone_horizontal">
+                    <div class="slider__slide-2">
+                        <img src="assets/images/Slide-2.png" alt="slider__slide-2">
+                         
+                        <div class="phone__screen__slide-2">
+                            <img class ="screen"  src="assets/images/screen-1.png">
+                        </div>
                     </div>
                     <div class="arrow__right">
-                        <div class="next"><img src="assets/images/next.png" alt="arrow__r"></div>
+                        <div class="arrow__next"><img class = "arrow"src="assets/images/next.png" alt="arrow__r"></div>
                     </div>
         
                 </div>
@@ -66,7 +78,7 @@
 
     <!-- Services
             ============================= -->
-    <section class="services">
+    <section id ='services' class="services">
         <div class="container">
             <h2 class="title__services">Our Services</h2>
             <p class="text__services">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
@@ -118,7 +130,7 @@
 
     <!-- Portfolio
             ============================= -->
-    <section class="portfolio">
+    <section id ='portfolio' class="portfolio">
         <div class="container">
             <h2 class="portfolio__title">Portfolio</h2>
             <p class="portfolio__subtitle">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
@@ -131,18 +143,18 @@
             </div>
             <div class="portfolio__3column">
 
-                <div class="portfolio__item"><img src="assets/images/portfolio/1.png" alt=""></div>
-                <div class="portfolio__item"><img src="assets/images/portfolio/2.png" alt=""></div>
-                <div class="portfolio__item"><img src="assets/images/portfolio/3.png" alt=""></div>
-                <div class="portfolio__item"><img src="assets/images/portfolio/4.png" alt=""></div>
-                <div class="portfolio__item"><img src="assets/images/portfolio/5.png" alt=""></div>
-                <div class="portfolio__item"><img src="assets/images/portfolio/6.png" alt=""></div>
-                <div class="portfolio__item"><img src="assets/images/portfolio/7.png" alt=""></div>
-                <div class="portfolio__item"><img src="assets/images/portfolio/8.png" alt=""></div>
-                <div class="portfolio__item"><img src="assets/images/portfolio/9.png" alt=""></div>
-                <div class="portfolio__item"><img src="assets/images/portfolio/10.png" alt=""></div>
-                <div class="portfolio__item"><img src="assets/images/portfolio/11.png" alt=""></div>
-                <div class="portfolio__item"><img src="assets/images/portfolio/12.png" alt=""></div>
+                <div class="portfolio__item"><img class = "images__item"src="assets/images/portfolio/1.png" alt=""></div>
+                <div class="portfolio__item"><img  class = "images__item" src="assets/images/portfolio/2.png" alt=""></div>
+                <div class="portfolio__item"><img class = "images__item" src="assets/images/portfolio/3.png" alt=""></div>
+                <div class="portfolio__item"><img class = "images__item" src="assets/images/portfolio/4.png" alt=""></div>
+                <div class="portfolio__item"><img class = "images__item" src="assets/images/portfolio/5.png" alt=""></div>
+                <div class="portfolio__item"><img  class = "images__item" src="assets/images/portfolio/6.png" alt=""></div>
+                <div class="portfolio__item"><img class = "images__item" src="assets/images/portfolio/7.png" alt=""></div>
+                <div class="portfolio__item"><img class = "images__item" src="assets/images/portfolio/8.png" alt=""></div>
+                <div class="portfolio__item"><img class = "images__item" src="assets/images/portfolio/9.png" alt=""></div>
+                <div class="portfolio__item"><img class = "images__item" src="assets/images/portfolio/10.png" alt=""></div>
+                <div class="portfolio__item"><img class = "images__item" src="assets/images/portfolio/11.png" alt=""></div>
+                <div class="portfolio__item"><img class = "images__item" src="assets/images/portfolio/12.png" alt=""></div>
 
             </div>
         </div>
@@ -153,7 +165,7 @@
 
     <!-- About Us
                     ============================= -->
-    <section class="about">
+    <section  id ="about" class="about">
         <div class="container">
             <h2 class="about__title">About Us</h2>
             <p class="about__subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
@@ -204,7 +216,7 @@
 
     <!-- QUOTE
                     ============================= -->
-    <section class="quote">
+    <section id ='contact' class="quote">
         <div class="container">
             <h2 class="qoute__title">Get a Quote</h2>
             <div class="quote__subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
@@ -212,10 +224,10 @@
                 tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
             <div class="quote__inner">
                 <form action="/" method="POST" class="form">
-                    <input type="text" class="input" placeholder="Name (Required)" required pattern="[a-zA-Zа-яА-Я]+">
+                    <input type="text" class="input" name ="topic" placeholder="Name (Required)" required pattern="[a-zA-Zа-яА-Я]+">
                     <input class="input" type="email" required placeholder="Email(Required)">
-                    <input class="input" type="text" placeholder="Subject">
-                    <textarea name="blog" id="blog" cols="30" rows="10" class="input input--area" type="text"
+                    <input class="input" type="text" name = "subject" placeholder="Subject">
+                    <textarea name="blog" id="blog"  cols="30" rows="10" class="input input--area" type="text"
                         placeholder="Describe your project in detail..."></textarea>
                     <button class="btn">Sumbit</button>
                 </form>
@@ -262,7 +274,7 @@
     </footer>
     <!-- End Footer-->
 
-
+<script src="script.js"></script>
 </body>
 
 </html>

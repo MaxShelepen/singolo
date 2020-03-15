@@ -14,29 +14,75 @@ const slider = document.querySelector('.slider');
 const slide1 = document.querySelector('.slider__slide-1');
 const slide2 = document.querySelector('.slider__slide-2');
 
-slider.addEventListener('click', (event) => {
+let items = document.querySelectorAll('.item');
+let currentItem = 0;
+let isEnabled = true;
 
-    if (event.target.className.includes('arrow')) {
-        if (slide1.className.includes('active')) {
-            slide1.classList.remove('active');
-            phone1__screenSlide1.classList.add('blockRemove');
-            phone2__screenSlide1.classList.add('blockRemove');
-            phoneScreen.querySelector('.screen').classList.remove('blockRemove');
-            slide2.classList.add('active');
-            slider.classList.add('background__Slide-2');
-        } else {
-            slide1.classList.add('active');
-            phoneScreen.querySelector('.screen').classList.add('blockRemove');
-            phone1__screenSlide1.classList.remove('blockRemove');
-            phone2__screenSlide1.classList.remove('blockRemove');
-            slide2.classList.remove('active');
-            slider.classList.remove('background__Slide-2');
-            slider.classList.add('background__Slide-1');
-        }
+function changeCurrentItem(n) {
+    currentItem = (n + items.length) % items.length;
+};
+
+function hideItem(direction) {
+    isEnabled = false;
+    items[currentItem].classList.add(direction);
+    items[currentItem].addEventListener('animationend', function() {
+        this.classList.remove('active', direction);
         
+    });
+   
+};
+
+function showItem(direction) {
+    
+    items[currentItem].classList.add('next', direction);
+    items[currentItem].addEventListener('animationend', function() {
+        this.classList.remove('next', direction);
+       this.classList.add('active');
+        isEnabled = true;
+    });
+};
+
+
+
+function previuosItem(n) {
+    hideItem('to-right')
+    changeCurrentItem(n - 1);
+    showItem('from-left');
+   
+};
+
+
+function nextItem(n) {
+    hideItem('to-left')
+    changeCurrentItem(n + 1);
+    showItem('from-right');
+  
+};
+
+
+document.querySelector('.control.left').addEventListener('click', function(n) {
+    if(isEnabled) {
+previuosItem(currentItem);
+}
+slider.classList.add('background__Slide-1')
+if(!slider.className.includes('background__Slide-2')) {
+    slider.classList.add('background__Slide-2')
+} else {
+   slider.classList.remove('background__Slide-2')
+}
+});
+
+document.querySelector('.control.right').addEventListener('click', function(n) {
+    if(isEnabled) {
+nextItem(currentItem);
 
     }
-
+    slider.classList.add('background__Slide-1')
+    if(!slider.className.includes('background__Slide-2')) {
+         slider.classList.add('background__Slide-2')
+    } else {
+        slider.classList.remove('background__Slide-2')
+    }
     
 });
 

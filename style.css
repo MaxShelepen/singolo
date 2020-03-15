@@ -278,13 +278,90 @@ header {
 
 /* styles Slider */
 
-
 .slider {
     background-color: #f06c64;
     overflow: hidden;
     height: 600px;
     border-bottom: solid 6px #ea676b;
 }
+
+.slider__wrapper {
+    position: relative;
+}
+.item {
+    display: none;
+    position: relative;
+     animation: 0.5s ease-in-out;
+}
+.active,
+.next {
+    display:block;
+}
+.next {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.description {
+ 
+   
+    justify-content: space-between;
+}
+.control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5%;
+    cursor: pointer;
+}
+.control.left {
+    left:0;
+    right: auto;
+}
+.control.right {
+    left:auto;
+    right: 0 ;
+    padding-left: 32px;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+}
+
+.to-left {
+    animation-name: left;
+}
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+.from-left{
+    animation-name: left;
+    animation-direction: reverse;
+}
+.from-right{
+    animation-name: right;
+}
+
+@keyframes left {
+    from {
+        left:0;
+    }
+    to {
+        left:-100%;
+    }
+}
+@keyframes right {
+    from {
+        left:100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
 .background__Slide-1  {
     background-color: #f06c64;
     border-bottom: solid 6px #ea676b;
@@ -295,33 +372,16 @@ header {
     border-bottom: solid 6px  rgba(100, 139, 240, 1);
 } 
 
-.slider__wrapper {
-    position: relative;
-}
 
 .slider__item {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-}
-.blockRemove {
-  opacity: 0;
-}
-.slider__slide-1 {
-    position: absolute;
-    top: 6px;
-    visibility: hidden;
+  position: relative;
+    overflow:hidden;
+    width:100%;
 }
 
 
 
 
-.slider__slide-2 {
-    position: absolute;
-    top: 6px;
-    visibility: hidden;
-}
 
 .phone1__screen-Slide1 {
     width: 194px;
@@ -358,20 +418,8 @@ header {
   visibility: visible;
 }
 
-.active {
-    visibility: visible;
-    z-index: 10;
-    animation: move 1s ;
-}
 
-@keyframes move {
-    from {
-      opacity: 0;
-    }
-    to { 
-   opacity: 1;
-    }  
-  }
+
 
 
 
@@ -386,29 +434,8 @@ header {
 }
 
 
-.arrow__left {
-    position: absolute;
-    top: 270px;
-    left: 20px;
-    z-index: 11;
-}
-
-.arrow__prev {
-    cursor: pointer;
 
 
-}
-
-.arrow__right {
-    position: absolute;
-    top: 270px;
-    right: 20px;
-    z-index: 10;
-}
-
-.arrow__next {
-    cursor: pointer;
-}
 
 
 /* END styles Slider */

@@ -257,7 +257,7 @@ header {
 }
 
 
-.navbar__list-item:not(.active):hover {
+.navbar__list-item a:not(.active):hover {
     color: #f06c64;
     text-decoration: uppercase;
     -o-transition-duration: 0.5s;

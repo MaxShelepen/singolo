@@ -292,7 +292,7 @@ header {
 .item {
     display: none;
     position: relative;
-     animation: 0.5s ease-in-out;
+     animation: 0.2s ease-in-out;
 }
 .active,
 .next {
@@ -304,9 +304,7 @@ header {
     width: 100%;
 }
 .description {
- 
-   
-    justify-content: space-between;
+ justify-content: space-between;
 }
 .control {
     position: absolute;
@@ -366,11 +364,13 @@ header {
 .background__Slide-1  {
     background-color: #f06c64;
     border-bottom: solid 6px #ea676b;
+    animation: 0.1s ease-in-out;
 } 
 
 .background__Slide-2  {
     background-color: rgba(100, 139, 240, 1);
     border-bottom: solid 6px  rgba(100, 139, 240, 1);
+    animation: 0.1s ease-in-out;
 } 
 
 

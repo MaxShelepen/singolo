@@ -9,6 +9,9 @@ menu.addEventListener('click', (event) => {
 
 const phoneScreen = document.querySelector('.phone__screen__slide-2');
 const phone1__screenSlide1 = document.querySelector('.phone1__screen-Slide1');
+const btn__phone1 = document.querySelector('.button__phone1');
+const btn__phone2 = document.querySelector('.button__phone2');
+const btn__phoneSlide2 = document.querySelector('.button__phone1-Slide2 ');
 const phone2__screenSlide1 = document.querySelector('.phone2__screen-Slide1');
 const slider = document.querySelector('.slider');
 const slide1 = document.querySelector('.slider__slide-1');
@@ -87,38 +90,37 @@ nextItem(currentItem);
 });
 
 
-
-phoneScreen.addEventListener('click', (event) => {
+btn__phoneSlide2.addEventListener('click', (event) => {
     const className = event.target.className;
-        if (className.includes('off')) {
+        if (className.includes('in')) {
             phoneScreen.querySelector('.screen').classList.remove('off');
-    
+            btn__phoneSlide2.classList.remove('in');
         } else {
             phoneScreen.querySelector('.screen').classList.add('off');
-    
+            btn__phoneSlide2.classList.add('in');
         };
     });
 
 
-    phone1__screenSlide1.addEventListener('click', (event) => {
+    btn__phone1.addEventListener('click', (event) => {
         const className = event.target.className;
-            if (className.includes('off')) {
+            if (className.includes('in')) {
                 phone1__screenSlide1.querySelector('.screen').classList.remove('off');
-        
+                btn__phone1.classList.remove('in');
             } else {
                 phone1__screenSlide1.querySelector('.screen').classList.add('off');
-        
+                btn__phone1.classList.add('in');
             };
         });
 
-        phone2__screenSlide1.addEventListener('click', (event) => {
+        btn__phone2.addEventListener('click', (event) => {
             const className = event.target.className;
-                if (className.includes('off')) {
+                if (className.includes('in')) {
                     phone2__screenSlide1.querySelector('.screen').classList.remove('off');
-            
+                    btn__phone2.classList.remove('in');
                 } else {
                     phone2__screenSlide1.querySelector('.screen').classList.add('off');
-            
+                    btn__phone2.classList.add('in');
                 };
             });
 

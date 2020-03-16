@@ -392,13 +392,24 @@ header {
     position: absolute;
     z-index: 1;
 }
-.button__phone1 {
+.button__phone1,.button__phone2 {
     position: absolute;
     width: 50px;
     height: 50px;
     left: 38%;
-
+    top: 342px;
 }
+
+.button__phone1-Slide2 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 38%;
+    top: 370px;
+}
+
+
+
 
 .phone2__screen-Slide1 {
     width: 190.77px;

@@ -1,11 +1,29 @@
-const menu = document.querySelector('#menu');
+// const menu = document.querySelector('#menu');
 
+// menu.addEventListener('click', (event) => {
+//     menu.querySelectorAll('.navbar__list-item > a').forEach(el => el.classList.remove('active'));
+//     event.target.classList.add('active');
+// });
 
-menu.addEventListener('click', (event) => {
-    menu.querySelectorAll('.navbar__list-item > a').forEach(el => el.classList.remove('active'));
-    event.target.classList.add('active');
-});
+document.addEventListener('scroll', onScroll);
 
+function onScroll(event) {
+    const curPos = window.scrollY;
+    const divs = document.querySelectorAll('#wrapper>div');
+    const links = document.querySelectorAll('#menu a')
+    divs.forEach((el) => {
+       if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+            links.forEach((a) => {
+                a.classList.remove('active');
+                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('active');
+                };
+            });
+        };
+        //    console.log(((el.offsetTop + el.offsetHeight) > curPos) === false ? 'FALSE' : 'true');
+        //     console.log((el.offsetTop + el.offsetHeight) + '>' + curPos);
+    });
+};
 
 const phoneScreen = document.querySelector('.phone__screen__slide-2');
 const phone1__screenSlide1 = document.querySelector('.phone1__screen-Slide1');

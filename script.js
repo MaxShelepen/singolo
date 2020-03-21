@@ -9,19 +9,17 @@ document.addEventListener('scroll', onScroll);
 
 function onScroll(event) {
     const curPos = window.scrollY;
-    const divs = document.querySelectorAll('#wrapper>div');
+    const divs = document.querySelectorAll('#wrapper > div');
     const links = document.querySelectorAll('#menu a')
     divs.forEach((el) => {
-       if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
-            links.forEach((a) => {
-                a.classList.remove('active');
-                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
-                    a.classList.add('active');
-                };
+    if (el.offsetTop - 230 <= curPos && (el.offsetTop + el.offsetHeight - 230) > curPos) {
+       links.forEach((a) => {
+            a.classList.remove('active');
+        if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+            a.classList.add('active')};
             });
         };
-        //    console.log(((el.offsetTop + el.offsetHeight) > curPos) === false ? 'FALSE' : 'true');
-        //     console.log((el.offsetTop + el.offsetHeight) + '>' + curPos);
+        
     });
 };
 
@@ -165,6 +163,7 @@ portfolio.addEventListener('click', (event) => {
 });
 
 const form = document.querySelector('.form');
+
 const button = document.querySelector('.btn');
 document.body.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -184,14 +183,18 @@ button.addEventListener('click', (event) => {
 });
 
 function showModal(text) {
+    const wrapperModal = document.createElement('div');
+    wrapperModal.classList.add('wrapper-modal');
     const modalWindow = document.createElement('div');
     modalWindow.classList.add('modal-window');
+    wrapperModal.append(modalWindow);
     const quoteInner = document.querySelector('.quote__inner');
     modalWindow.innerHTML = text;
-    quoteInner.append(modalWindow);
+    quoteInner.append(wrapperModal);
     document.querySelector('.form__response-button').addEventListener('click', removeModal);
 };
 
 function removeModal() {
     document.querySelector('.modal-window').remove();
+    document.querySelector('.wrapper-modal').remove();
 };

@@ -170,7 +170,7 @@ a {
     width: 100%;
     max-width: 1020px;
     margin: 0 auto;
-    padding: 0 25px;
+    padding: 0 3%;
 }
 
 
@@ -282,17 +282,37 @@ header {
 .slider {
     background-color: #f06c64;
     overflow: hidden;
-  
-    border-bottom: solid 6px #ea676b;
+  border-bottom: solid 6px #ea676b;
+
 }
 
-.slider__wrapper {
+.slider__item {
     position: relative;
-}
-.item {
+      overflow:hidden;
+      width:100%;
+  }
+  
+  .item {
     display: none;
-     animation: 0.2s ease-in-out;
+     animation: 0.5s ease-in-out;
 }
+
+
+
+
+
+.background__Slide-1  {
+    background-color: #f06c64;
+    border-bottom: solid 6px #ea676b;
+    animation: 0.1s ease-in-out;
+} 
+
+.background__Slide-2  {
+    background-color: rgba(100, 139, 240, 1);
+    border-bottom: solid 6px  rgba(100, 139, 240, 1);
+    animation: 0.1s ease-in-out;
+} 
+
 .active,
 .next {
     display:block;
@@ -303,7 +323,9 @@ header {
     width: 100%;
 }
 .description {
- justify-content: space-between;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
 }
 .control {
     position: absolute;
@@ -319,7 +341,7 @@ header {
 .control.right {
     left:auto;
     right: 0 ;
-    padding-left: 32px;
+   
 }
 .arrow {
     position: absolute;
@@ -360,73 +382,87 @@ header {
     }
 }
 
-.background__Slide-1  {
-    background-color: #f06c64;
-    border-bottom: solid 6px #ea676b;
-    animation: 0.1s ease-in-out;
-} 
-
-.background__Slide-2  {
-    background-color: rgba(100, 139, 240, 1);
-    border-bottom: solid 6px  rgba(100, 139, 240, 1);
-    animation: 0.1s ease-in-out;
-} 
-
-
-.slider__item {
-  position: relative;
-    overflow:hidden;
-    width:100%;
-}
 
 
 
-
+/* styles First Slider(phone) */
 
 .phone1__screen-Slide1 {
-    width: 194px;
-    height: 339px;
-    left: 123px;
-    top: 115px;
+    width: 19%;
+    height: 74%;
+    left: 12%;
+    top: 19%;
     position: absolute;
     z-index: 1;
 }
-.button__phone1,.button__phone2 {
+
+.iphone__vertical {
+    width: 23.82%;
+    z-index: 1;
+   
+    }
+  
+  .iphone__horizontal {
+    width: 46.6%;
+    height: 1%;
+    z-index: 1;
+  }
+
+.button__phone1 {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 25%;
+    height: 12%;
     left: 38%;
-    top: 342px;
+    top: 78%;
 }
+
+.phone2__screen-Slide1 {
+    width: 34%;
+    height: 38%;
+    left: 47%;
+    top: 26%;
+    position: absolute;
+    z-index: 1;
+    transform: rotate(180deg);
+}
+
+.button__phone2  {
+    position: absolute;
+    width: 15%;
+    height: 20%;
+    left: 100%;
+    top: 36%;
+}
+
+/* styles Second Slider(phone) */
+.phone__screen__slide-2 {
+    width: 20%;
+  
+    left: 39%;
+    top: 19%;
+    position: absolute;
+    z-index: 1;
+}
+
+.iphone__slide-two {
+    width: 50%;
+     z-index: 1;
+   }
+ 
 
 .button__phone1-Slide2 {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 25%;
+    height: 15%;
     left: 38%;
-    top: 370px;
+    top: 101%;
 }
 
 
 
 
-.phone2__screen-Slide1 {
-    width: 190.77px;
-    height: 339px;
-    left: 557px;
-    top: 114px;
-    position: absolute;
-    z-index: 1;
-    transform: rotate(90deg);
-}
 
-.horizontal__phone {
-    top: 73px;
-    position: absolute;
-    transform: rotate(90deg);
-   
-    left: -74px;
-}
+
 
 .screen {
     visibility: hidden;
@@ -435,23 +471,6 @@ header {
 .off {
   visibility: visible;
 }
-
-
-
-
-
-
-
-.phone__screen__slide-2 {
-    width: 207px;
-    height: 365px;
-    left: 394px;
-    top: 108px;
-    position: absolute;
-    z-index: 1;
-}
-
-
 
 
 
@@ -498,16 +517,12 @@ header {
 
 
 .services__inner {
-    margin-bottom: 30px;
-    width: 33%;
-    max-width: 299px;
-    max-height: 93px;
-    padding-left: 79px;
-
-    overflow: hidden;
-
     position: relative;
-}
+     flex: 1 0 30%;
+     margin: 0 15px 30px 15px;
+     padding-left: 79px;
+     overflow: hidden;
+  }
 
 .services__logo {
     display: flex;
@@ -609,8 +624,18 @@ header {
 }
 
 .portfolio__item {
-    flex-basis: 23%;
-    margin-bottom: 15px;
+    flex: 1 0 20%;
+    margin: 5px;
+}
+
+.images__item {
+    width: 100%;
+}
+
+.portfolio__item::before {
+content:"";
+float: left;
+padding-top: 60%;
 }
 
 .active__images {
@@ -651,12 +676,13 @@ header {
 .about__3column {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    
 }
 
 
 .about__content {
-    flex-basis: 16%;
+    flex: 1 0 16%;
+    margin: 10px;
 }
 
 .about__titleName {
@@ -988,5 +1014,31 @@ header {
 
 
 @media (max-width: 768px) {
+
+    .services__inner {
+        flex: 1 0 40%;
+         margin: 0 25px 30px 25px;
+   
+      }
+
+      .portfolio__item {
+        flex: 1 0 26%;
+        }
+}
+
+
+
+
+
+@media (max-width: 375px) {
+
+    .services__inner {
+        flex: 1 0 52%;
+        margin: 0 0px 30px 0px;
+   }
+
+   .portfolio__item {
+    flex: 1 0 31%;
+    }
 
 }

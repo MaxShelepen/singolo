@@ -198,3 +198,78 @@ function removeModal() {
     document.querySelector('.modal-window').remove();
     document.querySelector('.wrapper-modal').remove();
 };
+
+
+
+const newLocalTime = 200;
+(function ev() {
+  let time;
+  window.onresize = function tim() {
+    if (time) { clearTimeout(time); }
+    time = setTimeout(() => {
+      resizeWindow();
+    }, newLocalTime);
+  };
+}());
+
+function resizeWindow() {
+  
+  if (window.innerWidth < 376) {createBurgerMenu()};
+  if (window.innerWidth > 375) { console.log('up') };
+  
+    };
+
+    window.addEventListener('load', resizeWindow);
+
+
+    function createBurgerMenu() {
+        const navigation = document.querySelector('.navbar');
+        const titleHeader = document.querySelector('.logo__header');
+        const burgerTemplate = `<div class="burger__menu">
+                <div class="burger__header">
+                    <div class="burger__logo">
+                        <span class="logo">I I I</span>
+                    </div>
+                    <p class="burger__title">SINGOLO<span class="el-logo__burger">*</span></p> 
+                </div>
+              
+                <ul id ='menu' class="burger__list">
+                    <li class="burger__list-item"><a class="active" href="#home">home</a></li>
+                    <li class="burger__list-item"><a href="#services">services</a></li>
+                    <li class="burger__list-item"><a href="#portfolio">portfolio</a></li>
+                    <li class="burger__list-item"><a href="#about">about</a></li>
+                    <li class="burger__list-item"><a class="link" href="#contact">contact</a></li>
+                </ul>
+            </div>`;
+
+const burger = document.createElement('div');
+burger.className = 'burger hidden';
+burger.innerHTML = burgerTemplate;
+document.body.insertAdjacentElement('afterbegin', burger);
+navigation.remove();
+titleHeader.remove();
+const buttonBurger = document.createElement('div');
+buttonBurger.className = 'burger__logo';
+buttonBurger.addEventListener('click', () => {
+    
+    if(burger.className = 'burger hidden') {
+        burger.classList.remove('hidden');
+
+    }; 
+
+})
+const buttonBurgerHidden = document.querySelector('.logo');
+buttonBurgerHidden.addEventListener('click', () => {
+    burger.classList.add('hidden');
+
+});
+
+
+
+const headerWrapper = document.querySelector('.header__wrapper');
+buttonBurger.innerHTML = `<span class="logo">I I I</span><p class="burger__title">SINGOLO<span class="el-logo__burger">*</span></p> `;
+headerWrapper.insertAdjacentElement('afterbegin', buttonBurger);
+
+
+    };
+

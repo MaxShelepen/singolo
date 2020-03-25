@@ -227,9 +227,7 @@ function resizeWindow() {
         const titleHeader = document.querySelector('.logo__header');
         const burgerTemplate = `<div class="burger__menu">
                 <div class="burger__header">
-                    <div class="burger__logo">
-                        <span class="logo">I I I</span>
-                    </div>
+                    
                     <p class="burger__title">SINGOLO<span class="el-logo__burger">*</span></p> 
                 </div>
               
@@ -246,30 +244,66 @@ const burger = document.createElement('div');
 burger.className = 'burger hidden';
 burger.innerHTML = burgerTemplate;
 document.body.insertAdjacentElement('afterbegin', burger);
+
 navigation.remove();
 titleHeader.remove();
+
 const buttonBurger = document.createElement('div');
-buttonBurger.className = 'burger__logo';
-buttonBurger.addEventListener('click', () => {
-    
-    if(burger.className = 'burger hidden') {
+buttonBurger.className = 'hamburger__logo ';
+
+buttonBurger.innerHTML = `<div class="hamburger_menu close">
+<div class="line line-1"></div>
+<div class="line line-2"></div>
+<div class="line line-3"></div>
+</div>`;
+
+document.body.insertAdjacentElement('afterbegin', buttonBurger);
+
+const hamburgerLogo = document.createElement('p');
+hamburgerLogo.className = 'hamburger__title';
+const menuHamburger = document.querySelector('.hamburger_menu');
+
+
+
+
+
+// buttonBurger.addEventListener('click', () => {
+//     menuHamburger.classList.toggle('change');
+//     if(burger.className = 'burger hidden') {
+//         burger.classList.remove('hidden');
+//         } 
+
+// })
+
+buttonBurger.addEventListener('click', (event) => {
+    const className = event.target.className;
+   
+    if (className.includes('close')) {
+        buttonBurger.classList.remove('close');
         burger.classList.remove('hidden');
-
-    }; 
-
-})
-const buttonBurgerHidden = document.querySelector('.logo');
-buttonBurgerHidden.addEventListener('click', () => {
-    burger.classList.add('hidden');
+        menuHamburger.classList.toggle('change');
+    } else {
+        buttonBurger.classList.add('close');
+        burger.classList.add('hidden');
+        menuHamburger.classList.remove('change');
+    };
 
 });
 
 
 
+// const buttonBurgerHidden = document.querySelector('.logo ');
+// menuHamburger.addEventListener('click', () => {
+//     burger.classList.add('hidden');
+    
+// });
+
+
+
 const headerWrapper = document.querySelector('.header__wrapper');
-buttonBurger.innerHTML = `<span class="logo">I I I</span><p class="burger__title">SINGOLO<span class="el-logo__burger">*</span></p> `;
-headerWrapper.insertAdjacentElement('afterbegin', buttonBurger);
+hamburgerLogo.innerHTML = `SINGOLO<span class="el-logo__hamburger">*</span>`;
+headerWrapper.insertAdjacentElement('afterbegin', hamburgerLogo);
 
 
-    };
+};
 

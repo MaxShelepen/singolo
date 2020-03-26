@@ -275,16 +275,20 @@ const menuHamburger = document.querySelector('.hamburger_menu');
 
 // })
 
-buttonBurger.addEventListener('click', (event) => {
-    const className = event.target.className;
+
+menuHamburger.addEventListener('click', (event) => {
    
+    const className = event.currentTarget.className;
+    console.log(className)
     if (className.includes('close')) {
         buttonBurger.classList.remove('close');
         burger.classList.remove('hidden');
+        burger.classList.toggle('change');
         menuHamburger.classList.toggle('change');
     } else {
         buttonBurger.classList.add('close');
         burger.classList.add('hidden');
+        burger.classList.remove('change');
         menuHamburger.classList.remove('change');
     };
 

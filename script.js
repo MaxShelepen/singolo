@@ -214,8 +214,22 @@ const newLocalTime = 200;
 
 function resizeWindow() {
   
-  if (window.innerWidth < 376) {createBurgerMenu()};
-  if (window.innerWidth > 375) { console.log('up') };
+  if (window.innerWidth < 541) {
+      const burger = window.document.querySelector('.burger');
+      if(!burger){
+        createBurgerMenu();
+      };
+      
+    };
+
+  if (window.innerWidth > 540) {
+    const navigation = window.document.querySelector('.navbar');
+    if(!navigation){
+        createNavigationMenu();
+    };
+    
+      
+    };
   
     };
 
@@ -224,8 +238,8 @@ function resizeWindow() {
 
     function createBurgerMenu() {
         const navigation = document.querySelector('.navbar');
-        const titleHeader = document.querySelector('.logo__header');
-        const burgerTemplate = `<div class="burger__menu">
+        // const titleHeader = document.querySelector('.logo__header');
+        const burgerTemplate = `<div class="burger__menu none-visible">
                 <div class="burger__header">
                     
                     <p class="burger__title">SINGOLO<span class="el-logo__burger">*</span></p> 
@@ -246,7 +260,7 @@ burger.innerHTML = burgerTemplate;
 document.body.insertAdjacentElement('afterbegin', burger);
 
 navigation.remove();
-titleHeader.remove();
+// titleHeader.remove();
 
 const buttonBurger = document.createElement('div');
 buttonBurger.className = 'hamburger__logo ';
@@ -259,55 +273,66 @@ buttonBurger.innerHTML = `<div class="hamburger_menu close">
 
 document.body.insertAdjacentElement('afterbegin', buttonBurger);
 
-const hamburgerLogo = document.createElement('p');
-hamburgerLogo.className = 'hamburger__title';
+// const hamburgerLogo = document.createElement('p');
+// hamburgerLogo.className = 'hamburger__title';
 const menuHamburger = document.querySelector('.hamburger_menu');
 
-
-
-
-
-// buttonBurger.addEventListener('click', () => {
-//     menuHamburger.classList.toggle('change');
-//     if(burger.className = 'burger hidden') {
-//         burger.classList.remove('hidden');
-//         } 
-
-// })
 
 
 menuHamburger.addEventListener('click', (event) => {
    
     const className = event.currentTarget.className;
-    console.log(className)
+ const burgerMenu = document.querySelector('.burger__menu');
     if (className.includes('close')) {
-        buttonBurger.classList.remove('close');
+        menuHamburger.classList.remove('close');
         burger.classList.remove('hidden');
-        burger.classList.toggle('change');
-        menuHamburger.classList.toggle('change');
+  
+        burgerMenu.classList.replace('none-visible','visible');
+
+        menuHamburger.classList.add('open');
     } else {
-        buttonBurger.classList.add('close');
-        burger.classList.add('hidden');
-        burger.classList.remove('change');
-        menuHamburger.classList.remove('change');
+        menuHamburger.classList.add('close');
+        menuHamburger.classList.remove('open');
+        setTimeout(() => {
+            burger.classList.add('hidden');
+        },400);
+        
+
+        burgerMenu.classList.replace('visible','none-visible');
+      
     };
 
 });
 
 
 
-// const buttonBurgerHidden = document.querySelector('.logo ');
-// menuHamburger.addEventListener('click', () => {
-//     burger.classList.add('hidden');
-    
-// });
 
-
-
-const headerWrapper = document.querySelector('.header__wrapper');
-hamburgerLogo.innerHTML = `SINGOLO<span class="el-logo__hamburger">*</span>`;
-headerWrapper.insertAdjacentElement('afterbegin', hamburgerLogo);
+// const headerWrapper = document.querySelector('.header__wrapper');
+// hamburgerLogo.innerHTML = `SINGOLO<span class="el-logo__hamburger">*</span>`;
+// headerWrapper.insertAdjacentElement('afterbegin', hamburgerLogo);
 
 
 };
 
+
+function createNavigationMenu() {
+    const menuHamburger = document.querySelector('.hamburger_menu');
+    menuHamburger.remove();
+    const removeHamburger = document.querySelector('.burger');
+    removeHamburger.remove();
+  const headerMenu = `<ul id ='menu' class="navbar__list">
+          <li class="navbar__list-item"><a class="active" href="#home">home</a></li>
+          <li class="navbar__list-item"><a href="#services">services</a></li>
+          <li class="navbar__list-item"><a href="#portfolio">portfolio</a></li>
+          <li class="navbar__list-item"><a href="#about">about</a></li>
+          <li class="navbar__list-item"><a class="link" href="#contact">contact</a></li>
+      </ul>`;
+const navbar = document.createElement('nav');
+navbar.className = 'navbar';
+
+const headerWrapper = document.querySelector('.header__wrapper');
+ navbar.innerHTML = headerMenu;
+ headerWrapper.append(navbar);
+
+
+}
